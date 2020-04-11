@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>FlightSurety</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">FlightSurety</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+    <main class="container">
+      <!-- <button class="btn btn-success" id="operational-btn">On/Off</button> -->
+      <div id="display-wrapper" class="top-20"></div>
+      <div class="flights">
+        <form id="buyFlightForm">
+          <h3>Buy insurance for a flight:</h3>
+          <div class="row">
+            <div class="col-md-4 my-2">
+              <select class="form-control" id="flights-list">
+                <option value="-1" disabled selected>Choose Flight</option>
+              </select>
+            </div>
+            <div class="col-md-2 my-2">
+              <input
+                type="number"
+                step="0.01"
+                class="form-control"
+                placeholder="Value in ether"
+                id="amount"
+              />
+            </div>
+            <button class="btn btn-primary my-2">Buy Insurance</button>
+          </div>
+        </form>
+        <form id="withdraw-form">
+          <h3>Withdraw funds:</h3>
+          <div class="row">
+            <div class="col-md-4 my-2">
+              <input
+                type="text"
+                placeholder="Flight name"
+                class="form-control"
+                id="flightName"
+              />
+            </div>
+            <button class="btn btn-success my-2">Withdraw</button>
+          </div>
+        </form>
+      </div>
+      <div class="row top-20 oracles">
+        <label class="form">Flight</label>
+        <input
+          type="text"
+          class="form-control col-md-3 my-2"
+          id="flight-number"
+        />
+        <btn class="btn btn-primary my-2" id="submit-oracle"
+          >Submit to Oracles</btn
+        >
+      </div>
+    </main>
+  </body>
+</html>
